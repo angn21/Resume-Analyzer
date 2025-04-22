@@ -4,11 +4,6 @@ from transformers import BertTokenizer, BertModel
 from sklearn.metrics.pairwise import cosine_similarity
 import PyPDF2
 import nltk
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
-
 nltk.data.path.append('C:/Users/Anmol/AppData/Roaming/nltk_data/tokenizers/punkt')
 from nltk.tokenize import sent_tokenize
 import seaborn as sns
@@ -17,7 +12,7 @@ import numpy as np
 
 # Ensure you have the punkt tokenizer models downloaded
 nltk.download('punkt')
-ntlk.download('punkt_tab')
+nltk.download('punkt_tab')
 # Load pre-trained model and tokenizer from Hugging Face
 model_name = 'sentence-transformers/all-MiniLM-L6-v2'  # Efficient for sentence similarity tasks
 tokenizer = BertTokenizer.from_pretrained(model_name)
