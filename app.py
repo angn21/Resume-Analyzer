@@ -4,6 +4,11 @@ from transformers import BertTokenizer, BertModel
 from sklearn.metrics.pairwise import cosine_similarity
 import PyPDF2
 import nltk
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+
 nltk.data.path.append('C:/Users/Anmol/AppData/Roaming/nltk_data/tokenizers/punkt')
 from nltk.tokenize import sent_tokenize
 import seaborn as sns
