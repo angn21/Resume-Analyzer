@@ -14,7 +14,7 @@ import numpy as np
 nltk.download('punkt')
 nltk.download('punkt_tab')
 # Load pre-trained model and tokenizer from Hugging Face
-model_name = 'bert-base-uncased'  # Efficient for sentence similarity tasks
+model_name = 'sentence-transformers/all-MiniLM-L6-v2'  # Efficient for sentence similarity tasks
 tokenizer = BertTokenizer.from_pretrained(model_name)
 model = BertModel.from_pretrained(model_name)
 
