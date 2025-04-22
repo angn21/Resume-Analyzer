@@ -122,22 +122,7 @@ st.title("Resume Analyzer")
 resume_file = st.file_uploader("Upload your resume (PDF format)", type=["pdf"])
 
 # Job description input
-job_description = st.text_area("Job Description", """
-Key Responsibilities
-
-Assist in collecting, organizing, and analyzing financial data related to annual budget and financial performance reporting
-Prepare an annual budget for the assigned project
-Develop and maintain financial models to assess the profitability and risk of projects and investments
-Conduct research on energy markets, investment opportunities in the power sector, and industry trends to support decision-making processes
-
-Qualifications
-
-3rd or 4th year of a bachelor's degree student
-Business Administration / Business School / Finance
-GPA of 2.8 and above
-Good command of English
-Able to work at Head Office (KrungthepKreetha)
-""")
+job_description = st.text_area("Job Description", "")
 
 if resume_file is not None:
     # Extract text from uploaded resume
